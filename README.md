@@ -6,10 +6,9 @@ Term.ooo é um jogo semelhante ao Wordle, porém com palavras em português e de
 
 O objetivo do jogo é identificar uma palavra específica em um número determinado de tentativas. Em cada tentativa, o jogador escreve uma palavra de cinco letras e verifica quais letras estão presentes na palavra-alvo, sendo:
 
-$${\color{green}Letra \space \color{green}verde \space \color{green}:}$$
 Letra verde: está na palavra e na posição correta.
-<span style="color:yellow">Letra amarela:</span> está na palavra, mas não na posição correta.
-<span style="color:gray">Letra cinza:</span> não faz parte da palavra.
+Letra amarela: está na palavra, mas não na posição correta.
+Letra cinza: não faz parte da palavra.
 Dessa forma, o desafio é encontrar a palavra correta dentro do limite de tentativas disponíveis.
 
 ## Oque faz esse algoritmo?
@@ -28,9 +27,9 @@ Term.ooo is a game similar to Wordle but with words in Portuguese (PT-BR) and ch
 
 The objective of the game is to identify a specific word within a set number of attempts. In each attempt, the player enters a five-letter word and checks which letters are present in the target word, where:
 
-<span style="color:green">Green letter:</span> is in the word and in the correct position.
-<span style="color:yellow">Yellow letter:</span> is in the word but not in the correct position.
-<span style="color:gray">Gray letter:</span> is not part of the word.
+Green letter: is in the word and in the correct position.
+Yellow letter: is in the word but not in the correct position.
+Gray letter: is not part of the word.
 Thus, the challenge is to find the correct word within the given number of attempts.
 
 ## What this algorithm do?
