@@ -1,0 +1,20 @@
+{
+  "name": "term-finder",
+  "version": "1.0.0",
+  "description": "(english version ahead)",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "live-server landing-page.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielMenoni/term.ooo-solver.git"
+  },
+  "author": "Gabriel Menoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielMenoni/term.ooo-solver/issues"
+  },
+  "homepage": "https://github.com/GabrielMenoni/term.ooo-solver#readme"
+}
