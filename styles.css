@@ -52,11 +52,44 @@ body #main-wrapper #content #letters #rows {
 }
 
 body #main-wrapper #content #letters #rows .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
     width: 8vw;
     height: 50vh;
     background-color: burlywood;
 }
 
+body #main-wrapper #content #letters #rows input[type="text"]{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 15%;
+    text-align: center;
+    margin-top: 2vh;
+    border: 0px;
+
+}
+
+body #main-wrapper #content #letters #rows button{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 15%;
+    margin-top: 1vh;
+    border: 0;
+}
+
+body #main-wrapper #content #letters #rows .green{
+    background-color: green;
+}
+
+body #main-wrapper #content #letters #rows .yellow{
+    background-color: yellow;
+}
+
+body #main-wrapper #content #letters #rows .gray{
+    background-color: gray;
+}
 
 /* Footer */
 
