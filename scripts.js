@@ -1,3 +1,5 @@
+//Get the letter in the input and force it to be uppercase
+//Also if the input have the class "grey" remove letter from input
 function getUppercase() {
     varinput = document.querySelectorAll(".letter");
     for(let i = 0; i< varinput.length; i++){
@@ -9,6 +11,8 @@ function getUppercase() {
     }
 }
 
+//Clean the classes "yellow" and "grey" and add the "green" class to a input
+//param: number of the row
 function bgGreen(num){
     id = 'letter'+num
     input = document.getElementById(id);
@@ -17,6 +21,8 @@ function bgGreen(num){
     input.classList.add("green")
 }
 
+//Clean the classes "green" and "grey" and add the "yellow" class to a input
+//param: number of the row
 function bgYellow(num){
     id = 'letter'+num
     input = document.getElementById(id);
@@ -25,6 +31,9 @@ function bgYellow(num){
     input.classList.add("yellow")
 }
 
+//Clean the classes "yellow" and "green" and add the "gray" class to a input
+//Also remove the letter in the input
+//param: number of the row
 function bgGray(num){
     id = 'letter'+num
     input = document.getElementById(id);

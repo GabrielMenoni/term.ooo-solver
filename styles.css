@@ -1,4 +1,4 @@
-/* Configurations */
+/* ========== Configurations ========== */
 
 body {
     padding: 0px;
@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-/* Header */
+/* ========== Header ========== */
 
 body #main-wrapper #header {
     position: fixed;
@@ -25,7 +25,7 @@ body #main-wrapper #header {
 
 }
 
-/* Main Content */
+/* ========== Main Content ========== */
 
 body #main-wrapper #content {
     width: 100vw;
@@ -61,6 +61,7 @@ body #main-wrapper #content #letters #rows .row {
     background-color: burlywood;
 }
 
+/* All Letter input */
 body #main-wrapper #content #letters #rows input[type="text"]{
     width: 6vw;
     height: 6vw;
@@ -71,6 +72,7 @@ body #main-wrapper #content #letters #rows input[type="text"]{
 
 }
 
+/* All color buttons in each row */
 body #main-wrapper #content #letters #rows button{
     width: 4vw;
     height: 4vw;
@@ -79,19 +81,22 @@ body #main-wrapper #content #letters #rows button{
     border: 0;
 }
 
+ /* Green class */
 body #main-wrapper #content #letters #rows .green{
     background-color: green;
 }
 
+/* Yellow class */
 body #main-wrapper #content #letters #rows .yellow{
     background-color: yellow;
 }
 
+/* Gray class */
 body #main-wrapper #content #letters #rows .gray{
     background-color: gray;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 
 body #main-wrapper #footer {
     position: fixed;
