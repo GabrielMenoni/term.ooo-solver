@@ -16,7 +16,11 @@ body #main-wrapper #header {
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background-color: aqua;
+    background-color: #6e5c62;
+    color: #FAFAFF;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
     align-content: center;
     font-size: 4vw;
@@ -41,13 +45,13 @@ body #main-wrapper #content #letters {
     align-content: center;
     width: 90vw;
     height: 75vh;
-    background-color: brown;
+    background-color: #6e5c62;
 }
 
 body #main-wrapper #content #letters #rows {
     width: 90vw;
     height: 40vh;
-    background-color:purple;
+    background-color:#6e5c62;
     display: flex;
     justify-content: space-between;
 }
@@ -59,7 +63,6 @@ body #main-wrapper #content #letters #rows .row {
     align-items: center;
     width: 17vw;
     height: 40vh;
-    background-color: burlywood;
 }
 
 /* All Letter input */
@@ -70,7 +73,12 @@ body #main-wrapper #content #letters #rows input[type="text"]{
     text-align: center;
     margin-top: 2vh;
     border: 0px;
-
+    font-family: 'Mitr', sans-serif;
+    color: #FAFAFF;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* All color buttons in each row */
@@ -80,15 +88,29 @@ body #main-wrapper #content #letters #rows button{
     border-radius: 50%;
     margin-top: 1vh;
     border: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 body #main-wrapper #content #letters #search {
     width: 200px;
     height: 40px;
-    border: 0px;
     margin-right: calc((90vw - 200px)/2);
     margin-left: calc((90vw - 200px)/2);
     margin-top: 4vh;
+    background-color: #FAFAFF;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body #main-wrapper #content #letters #search:hover {
+    background-color: #333;
+    color: #FAFAFF; 
+    border-color: #333;
 }
 
 /* responsivity for wider screens */
@@ -98,16 +120,13 @@ body #main-wrapper #content #letters #search {
         padding-left: calc(50vw - 238.5px);
         padding-right: calc(50vw - 238.5px);
         align-content: center;
-
         width: 477px;
         height: 75vh;
-        background-color: blue;
     }
 
     body #main-wrapper #content #letters #rows {
         width: 478px;
         height: 348px;
-        background-color:purple;
         display: flex;
         justify-content: space-between;
     }
@@ -119,7 +138,6 @@ body #main-wrapper #content #letters #search {
         align-items: center;
         width: 90.09px;
         height: 348px;
-        background-color: burlywood;
     }
 
     body #main-wrapper #content #letters #rows input[type="text"]{
@@ -129,7 +147,6 @@ body #main-wrapper #content #letters #search {
     text-align: center;
     margin-top: 17.4px;
     border: 0px;
-
     }
 
     body #main-wrapper #content #letters #rows button{
@@ -153,17 +170,42 @@ body #main-wrapper #content #letters #search {
 
  /* Green class */
 body #main-wrapper #content #letters #rows .green{
-    background-color: green;
+    background-color: #3aa394;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+ /* Green class */
+ body #main-wrapper #content #letters #rows .green:hover{
+    background-color: rgb(85, 197, 180);
+    transform: scale(1.1);
 }
 
 /* Yellow class */
 body #main-wrapper #content #letters #rows .yellow{
-    background-color: yellow;
+    background-color: #eac483;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Yellow class */
+body #main-wrapper #content #letters #rows .yellow:hover{
+    background-color: rgb(210, 184, 140);
+    transform: scale(1.1);
 }
 
 /* Gray class */
 body #main-wrapper #content #letters #rows .gray{
-    background-color: rgb(41, 41, 41);
+    background-color: #312a2c;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+    
+}
+
+/* Gray class */
+body #main-wrapper #content #letters #rows .gray:hover{
+    background-color: #342f31;
+    transform: scale(1.1);
 }
 
 
@@ -174,9 +216,10 @@ body #main-wrapper #footer {
     position: fixed;
     width: 100vw;
     height: 5vh;
-    background-color: aqua;
+    background-color: #312a2c;
     text-align: center;
     align-content: center;
+    color: #FAFAFF;
     font-size: 20px;
     font-weight: lighter;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
