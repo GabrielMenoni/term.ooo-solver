@@ -48,6 +48,18 @@ body #main-wrapper #content #letters {
     background-color: #6e5c62;
 }
 
+body #main-wrapper #content #letters #tutorial{
+    height: 8vw;
+    width: 8vw;
+    margin-left: calc((90vw - 8vw)/2);
+    margin-right: calc((90vw - 8vw)/2);
+    margin-bottom: 5vh;
+    font-family: 'Mitr', sans-serif;
+    color: #000000;
+    font-weight: 600;
+    font-size: 5vw;    
+}
+
 body #main-wrapper #content #letters #rows {
     width: 90vw;
     height: 40vh;
@@ -124,6 +136,18 @@ body #main-wrapper #content #letters #search:hover {
         height: 75vh;
     }
 
+    body #main-wrapper #content #letters #tutorial{
+        height: 50px;
+        width: 50px;
+        margin-left: 213.5px;
+        margin-right: 213.5px;
+        margin-bottom: 5vh;
+        font-family: 'Mitr', sans-serif;
+        color: #000000;
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+
     body #main-wrapper #content #letters #rows {
         width: 478px;
         height: 348px;
@@ -172,7 +196,7 @@ body #main-wrapper #content #letters #search:hover {
 body #main-wrapper #content #letters #rows .green{
     background-color: #3aa394;
     cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
  /* Green class */
@@ -185,7 +209,7 @@ body #main-wrapper #content #letters #rows .green{
 body #main-wrapper #content #letters #rows .yellow{
     background-color: #eac483;
     cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 /* Yellow class */
@@ -198,7 +222,7 @@ body #main-wrapper #content #letters #rows .yellow:hover{
 body #main-wrapper #content #letters #rows .gray{
     background-color: #312a2c;
     cursor: pointer;
-    transition: transform 0.2s, color 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
     
 }
 
