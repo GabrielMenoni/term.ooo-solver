@@ -38,8 +38,9 @@ body #main-wrapper #content #letters {
     padding-top: 20vh;
     padding-left: 5vw;
     padding-right: 5vw;
+    align-content: center;
     width: 90vw;
-    height: 50vh;
+    height: 75vh;
     background-color: brown;
 }
 
@@ -96,8 +97,10 @@ body #main-wrapper #content #letters #search {
         padding-top: 20vh;
         padding-left: calc(50vw - 238.5px);
         padding-right: calc(50vw - 238.5px);
+        align-content: center;
+
         width: 477px;
-        height: 50vh;
+        height: 75vh;
         background-color: blue;
     }
 
