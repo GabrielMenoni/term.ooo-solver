@@ -14,31 +14,34 @@ function getUppercase() {
 //Clean the classes "yellow" and "grey" and add the "green" class to a input
 //param: number of the row
 function bgGreen(num){
-    id = 'letter'+num
+    id = 'letter'+num;
     input = document.getElementById(id);
-    input.classList.remove("gray")
-    input.classList.remove("yellow")
-    input.classList.add("green")
+    input.classList.remove("gray");
+    input.classList.remove("yellow");
+    input.classList.add("green");
+    input.disabled = false;
 }
 
 //Clean the classes "green" and "grey" and add the "yellow" class to a input
 //param: number of the row
 function bgYellow(num){
-    id = 'letter'+num
+    id = 'letter'+num;
     input = document.getElementById(id);
-    input.classList.remove("green")
-    input.classList.remove("gray")
-    input.classList.add("yellow")
+    input.classList.remove("green");
+    input.classList.remove("gray");
+    input.classList.add("yellow");
+    input.disabled = false;
 }
 
 //Clean the classes "yellow" and "green" and add the "gray" class to a input
 //Also remove the letter in the input
 //param: number of the row
 function bgGray(num){
-    id = 'letter'+num
+    id = 'letter'+num;
     input = document.getElementById(id);
-    input.classList.remove("green")
-    input.classList.remove("yellow")
-    input.classList.add("gray")
-    input.value = ''
+    input.classList.remove("green");
+    input.classList.remove("yellow");
+    input.classList.add("gray");
+    input.value = '';
+    input.disabled = true;
 }
