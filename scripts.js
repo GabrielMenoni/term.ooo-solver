@@ -53,7 +53,7 @@ function sendWords(){
     let states = [];
 
     for(let i = 0; i < letters.length; i++){
-        values.push(letters[i].value);
+        values.push(letters[i].value.toLowerCase());
         if(letters[i].classList.contains("green")){
             states.push("V");
         } else if(letters[i].classList.contains("yellow")){
@@ -69,7 +69,7 @@ function sendWords(){
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
             response = JSON.parse(xhr.responseText);
-            console.log("Server response: " + response.resultado);
+            possibleWords = response.resultado;
         }
     };
     

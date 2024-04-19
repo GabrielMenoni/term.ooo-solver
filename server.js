@@ -1,10 +1,8 @@
-function search(param1, param2){
-    return "I made it!"
-}
-
 const http = require('http')
 const fs = require('fs')
 const path = require('path')
+
+const search = require('./search.js')
 
 const port = 3000
 
@@ -50,10 +48,15 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
         const parametros = JSON.parse(data);
         
-        const resultado = search(parametros.values, parametros.states)
-
-        res.writeHead(200, {'Content-Type': 'application/json'});
-        res.end(JSON.stringify({resultado: resultado}));
+        search(parametros.values, parametros.states).then(resultado => {
+            res.writeHead(200, {'Content-Type': 'application/json'});
+            res.end(JSON.stringify({resultado: resultado}));
+        })
+        .catch(error => {
+            console.error('Erro ao buscar' + error);
+            res.writeHead(500, {'Content-Type': 'application/json'});
+            res.end(JSON.stringify({error: 'Erro interno do servidor'}));
+        });
     });
    } else {
     res.writeHead(404, {'content-type': 'text/plain'});
