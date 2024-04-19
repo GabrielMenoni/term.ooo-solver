@@ -18,12 +18,10 @@ body #main-wrapper #header {
     height: 10vh;
     background-color: #6e5c62;
     color: #FAFAFF;
-    font-family: 'Mitr', sans-serif;
-    font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
     align-content: center;
-    font-size: 4vw;
+    font-size: 10vw;
     font-weight: bold;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -34,7 +32,6 @@ body #main-wrapper #header {
 body #main-wrapper #content {
     width: 100vw;
     height: 95vh;
-    background-color: bisque;
     overflow-y: auto;
 }
 
@@ -49,16 +46,32 @@ body #main-wrapper #content #letters {
 }
 
 body #main-wrapper #content #letters #tutorial{
-    height: 8vw;
-    width: 8vw;
-    margin-left: calc((90vw - 8vw)/2);
-    margin-right: calc((90vw - 8vw)/2);
-    margin-bottom: 5vh;
+    position: fixed;
+    top: 12%;
+    left: 85%;
+    width: 10vw;
+    height: 10vw;
+    background-color: transparent;
+    border-width: 1vw;
+    border-style: solid;
+    border-radius: 20%;
+    border-color: hsla(240, 100%, 99%, 0.5);
+    text-align: center;
+    align-content: center;
     font-family: 'Mitr', sans-serif;
-    color: #000000;
+    color: hsla(240, 100%, 99%, 0.5);
     font-weight: 600;
-    font-size: 5vw;    
+    font-size: 5vw;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;    
 }
+
+body #main-wrapper #content #letters #tutorial:hover {
+    transform: scale(1.2);
+}
+
+
 
 body #main-wrapper #content #letters #rows {
     width: 90vw;
@@ -125,8 +138,241 @@ body #main-wrapper #content #letters #search:hover {
     border-color: #333;
 }
 
+ /* Green class */
+body #main-wrapper #content #letters #rows .green{
+    background-color: #3aa394;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+ /* Green class */
+ body #main-wrapper #content #letters #rows .green:hover{
+    background-color: rgb(85, 197, 180);
+    transform: scale(1.1);
+}
+
+/* Yellow class */
+body #main-wrapper #content #letters #rows .yellow{
+    background-color: #eac483;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* Yellow class */
+body #main-wrapper #content #letters #rows .yellow:hover{
+    background-color: rgb(210, 184, 140);
+    transform: scale(1.1);
+}
+
+/* Gray class */
+body #main-wrapper #content #letters #rows .gray{
+    background-color: #312a2c;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    
+}
+
+/* Gray class */
+body #main-wrapper #content #letters #rows .gray:hover{
+    background-color: #342f31;
+    transform: scale(1.1);
+}
+
+/* ========== Footer ========== */
+
+body #main-wrapper #footer {
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    background-color: #312a2c;
+    text-align: center;
+    align-content: center;
+    color: #FAFAFF;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body .hidden {
+    display: none;
+}
+
+body #responses {
+    width: 80vw;
+    height: 50vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsla(343, 8%, 18%, 0.90);
+    border: 2px solid #000000;
+    z-index: 9999;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body #responses #close-responses {
+    background-color: transparent;
+    border: none;
+    color: #FAFAFF;
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    font-size: 5vw;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.2s;
+}
+
+body #responses #close-responses:hover {
+    transform: scale(1.2);
+}
+
+body #responses #title {
+    width: 80vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: 5vw;
+    text-align: center;
+    color: #FAFAFF;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body #responses #words {
+    width: 74vw;
+    height: 34vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vh;
+    font-size: 5vw;
+    letter-spacing: 0.2vw;
+    overflow: auto;
+    text-align: left;
+    color: #FAFAFF;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body #tutorialbox {
+    width: 80vw;
+    height: 50vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsla(343, 8%, 18%, 0.90);
+    border: 2px solid #000000;
+    z-index: 9999;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+body #tutorialbox #close-tutorial {
+    background-color: transparent;
+    border: none;
+    color: #FAFAFF;
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    font-size: 5vw;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.2s;
+}
+
+body #tutorialbox #close-tutorial:hover {
+    transform: scale(1.2);
+}
+
+body #tutorialbox #title {
+    width: 80vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: 7vw;
+    text-align: center;
+    color: #FAFAFF;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body #tutorialbox #tutorialtext #tutorialtext1 {
+    width: 74vw;
+    height: 10vh;
+    text-align: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vh;
+    font-size: 4vw;
+    align-content: center;
+    font-weight: lighter;
+    color: #FAFAFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body #tutorialbox #tutorialtext .boxtext {
+    display: flex;
+    align-items: center;
+    width: 74vw;
+    height: 6vh;
+    font-size: 3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    color: #FAFAFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.2vw;
+}
+
+body #tutorialbox #tutorialtext .boxtext #greenbox {
+    width: 4vh;
+    height: 4vh;
+    background-color: #3aa394;
+    border: 0.3vh solid hsla(240, 100%, 99%, 0.70);
+    margin-right: 2vw;
+    border-radius: 0.5vh;
+}
+
+body #tutorialbox #tutorialtext .boxtext #yellowbox {
+    width: 6vh;
+    height: 4vh;
+    background-color: #eac483;
+    border: 0.3vh solid hsla(240, 100%, 99%, 0.70);
+    margin-right: 2vw;
+    border-radius: 0.5vh;
+}
+
+body #tutorialbox #tutorialtext .boxtext #graybox {
+    width: 4vh;
+    height: 4vh;
+    background-color: #221d1f;
+    border: 0.3vh solid hsla(240, 100%, 99%, 0.70);
+    margin-right: 2vw;
+    border-radius: 0.5vh;
+}
+
+body #icons {
+    position: fixed;
+    bottom: 0.5vh;
+    right: 3vw;
+    
+}
+
+body #icons #github {
+    fill: #FAFAFF;
+    width: 3vh;
+    height: 3vh;
+}
+
+body #icons #linkedin {
+    fill: #0e76a8;
+    width: 3vh;
+    height: 3vh;
+}
+
 /* responsivity for wider screens */
 @media screen and (min-width: 530px) {
+    body #main-wrapper #header{
+        font-size: 60px;
+    }
+    
     body #main-wrapper #content #letters {
         padding-top: 20vh;
         padding-left: calc(50vw - 238.5px);
@@ -137,15 +383,12 @@ body #main-wrapper #content #letters #search:hover {
     }
 
     body #main-wrapper #content #letters #tutorial{
-        height: 50px;
-        width: 50px;
-        margin-left: 213.5px;
-        margin-right: 213.5px;
-        margin-bottom: 5vh;
-        font-family: 'Mitr', sans-serif;
-        color: #000000;
-        font-weight: 600;
-        font-size: 1.8rem;
+        top: 12%;
+        left: calc(50vw + 180px);
+        width: 55px;
+        height: 55px;
+        border-width: 5px;
+        font-size: 30px;   
     }
 
     body #main-wrapper #content #letters #rows {
@@ -190,62 +433,100 @@ body #main-wrapper #content #letters #search:hover {
         margin-top: 4vh;
     }
 
-}
+    body #main-wrapper #footer {
+        font-size: 3vh;
+    }
 
- /* Green class */
-body #main-wrapper #content #letters #rows .green{
-    background-color: #3aa394;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
+    body #responses {
+        padding-right: 0;
+        padding-left: 0;
+        width: 477px;
+    }
 
- /* Green class */
- body #main-wrapper #content #letters #rows .green:hover{
-    background-color: rgb(85, 197, 180);
-    transform: scale(1.1);
-}
+    body #responses #close-responses {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 25px;
+        cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 
-/* Yellow class */
-body #main-wrapper #content #letters #rows .yellow{
-    background-color: #eac483;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
+    body #responses #title {
+        width: 477px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
 
-/* Yellow class */
-body #main-wrapper #content #letters #rows .yellow:hover{
-    background-color: rgb(210, 184, 140);
-    transform: scale(1.1);
-}
-
-/* Gray class */
-body #main-wrapper #content #letters #rows .gray{
-    background-color: #312a2c;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    body #responses #words {
+        width: 437px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0;
+        font-size: 25px;
+        letter-spacing: 1px;
     
-}
+    }
 
-/* Gray class */
-body #main-wrapper #content #letters #rows .gray:hover{
-    background-color: #342f31;
-    transform: scale(1.1);
-}
+    body #tutorialbox {
+        padding-right: 0;
+        padding-left: 0;
+        width: 477px;
+    }
 
+    body #tutorialbox #close-tutorial {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 25px;
+        cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 
+    body #tutorialbox #title {
+        width: 477px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
 
-/* ========== Footer ========== */
-
-body #main-wrapper #footer {
-    position: fixed;
-    width: 100vw;
-    height: 5vh;
-    background-color: #312a2c;
-    text-align: center;
-    align-content: center;
-    color: #FAFAFF;
-    font-size: 20px;
-    font-weight: lighter;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    body #tutorialbox #tutorialtext #tutorialtext1 {
+        width: 437px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 3vh;
+        font-size: 21px;
+    }
+    
+    body #tutorialbox #tutorialtext .boxtext {
+        width: 437px;
+        height: 6vh;
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
+        letter-spacing: 1px;
+    }
+    
+    body #tutorialbox #tutorialtext .boxtext #greenbox {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+    
+    body #tutorialbox #tutorialtext .boxtext #yellowbox {
+        width: 42px;
+        height: 30px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+    
+    body #tutorialbox #tutorialtext .boxtext #graybox {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
 
 }
