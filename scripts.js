@@ -45,3 +45,33 @@ function bgGray(num){
     input.value = '';
     input.disabled = true;
 }
+
+function sendWords(){
+    letters = document.querySelectorAll(".letter");
+
+    let values = [];
+    let states = [];
+
+    for(let i = 0; i < letters.length; i++){
+        values.push(letters[i].value);
+        if(letters[i].classList.contains("green")){
+            states.push("V");
+        } else if(letters[i].classList.contains("yellow")){
+            states.push("A");
+        } else {
+            states.push("C");
+        }
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost:3000/words", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+            response = JSON.parse(xhr.responseText);
+            console.log("Server response: " + response.resultado);
+        }
+    };
+    
+    xhr.send(JSON.stringify({values: values, states: states}));
+}
