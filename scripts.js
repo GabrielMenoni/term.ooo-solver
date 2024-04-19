@@ -1,5 +1,5 @@
-//Get the letter in the input and force it to be uppercase
-//Also if the input have the class "grey" remove letter from input
+//Verify if the input received is a letter, remove if is not a letter
+//Also forces the letter to be Uppercase
 function getUppercase() {
     varinput = document.querySelectorAll(".letter");
 
@@ -53,6 +53,7 @@ function bgGray(num){
     input.disabled = true;
 }
 
+//Function to send the inputs to the algortim
 function sendWords(){
     closeTutorial();
 
@@ -63,12 +64,13 @@ function sendWords(){
 
 
     for(let i = 0; i < letters.length; i++){
-
+        //If any of the input is colores and don't contains a letter, send an alert.
         if(!letters[i].classList.contains("gray") && letters[i].value == ''){
             alert("Preencha todos os campos diferentes de cinza.");
             return;
         }
 
+        //Insert all values and colors to the arrays
         values.push(letters[i].value.toLowerCase());
         if(letters[i].classList.contains("green")){
             states.push("V");
@@ -79,22 +81,26 @@ function sendWords(){
         }
     }
 
+    //If all of the inputs are "gray", send an alert.
     if(states.every(elemento => elemento === "C")){
         alert("Preencha pelo menos um campo.");
         return;
     }
 
+    //Make the request to the server
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://localhost:3000/words", true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function() {
+        //When done, receive the answers in possibleWords
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
             response = JSON.parse(xhr.responseText);
             possibleWords = response.resultado;
 
-    div = document.getElementById("responses");
-    div.classList.remove("hidden");
-    document.getElementById("words").innerHTML = possibleWords.join(",  ");
+            //Show the responses div and print possibleWords
+            div = document.getElementById("responses");
+            div.classList.remove("hidden");
+            document.getElementById("words").innerHTML = possibleWords.join(",  ");
         }
     };
     
@@ -103,6 +109,7 @@ function sendWords(){
     document.addEventListener('click', clickOutsideAnswers);
 }
 
+//Close the responses div
 function closeResponses(){
     div = document.getElementById("responses");
     div.classList.add("hidden");
@@ -110,14 +117,22 @@ function closeResponses(){
     document.removeEventListener('click', clickOutsideAnswers);
 }
 
+//Open tutorialbox div
+//Also verify if is not already open
 function openTutorial(){
     closeResponses();
     div = document.getElementById("tutorialbox");
-    div.classList.remove("hidden");
+
+    if (!div.classList.contains("hidden")){
+        div.classList.add("hidden")
+    } else {
+        div.classList.remove("hidden");
+    }
 
     document.addEventListener('click', clickOutsideTutorial);
 }
 
+//Close tutorialbox div
 function closeTutorial(){
     div = document.getElementById("tutorialbox");
     div.classList.add("hidden");
@@ -125,16 +140,18 @@ function closeTutorial(){
     document.removeEventListener('click', clickOutsideTutorial);
 }
 
+//Function to close tutorial when user click outside of the div
 function clickOutsideTutorial(event) {
     const div = document.getElementById('tutorial');
-    if (!div.contains(event.target) && !event.target.closest('#tutorialbox')) { // Verifica se o clique ocorreu fora da div
+    if (!div.contains(event.target) && !event.target.closest('#tutorialbox')) {
         closeTutorial();
     }
 }
 
+//Function to close response when user click outside of the div
 function clickOutsideAnswers(event) {
     const div = document.getElementById('responses');
-    if (!div.contains(event.target) && !event.target.closest('#search')) { // Verifica se o clique ocorreu fora da div
+    if (!div.contains(event.target) && !event.target.closest('#search')) {
         closeResponses();
     }
 }

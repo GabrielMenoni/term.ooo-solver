@@ -64,14 +64,13 @@ body #main-wrapper #content #letters #tutorial{
     font-size: 5vw;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
     transition: transform 0.2s;    
 }
 
 body #main-wrapper #content #letters #tutorial:hover {
     transform: scale(1.2);
 }
-
-
 
 body #main-wrapper #content #letters #rows {
     width: 90vw;
@@ -116,6 +115,7 @@ body #main-wrapper #content #letters #rows button{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Search Button */
 body #main-wrapper #content #letters #search {
     width: 200px;
     height: 40px;
@@ -193,10 +193,12 @@ body #main-wrapper #footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Class Hidden */
 body .hidden {
     display: none;
 }
 
+/* Div for answers */
 body #responses {
     width: 80vw;
     height: 50vh;
@@ -210,6 +212,7 @@ body #responses {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* "Close" button for answers div */
 body #responses #close-responses {
     background-color: transparent;
     border: none;
@@ -253,6 +256,8 @@ body #responses #words {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+/* Div for tutorial */
 body #tutorialbox {
     width: 80vw;
     height: 50vh;
@@ -266,6 +271,7 @@ body #tutorialbox {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Tutorial close button */
 body #tutorialbox #close-tutorial {
     background-color: transparent;
     border: none;
@@ -348,6 +354,7 @@ body #tutorialbox #tutorialtext .boxtext #graybox {
     border-radius: 0.5vh;
 }
 
+/* Icons in the footer */
 body #icons {
     position: fixed;
     bottom: 0.5vh;

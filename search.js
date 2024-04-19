@@ -6,6 +6,7 @@ function search(myLetters, myStates){
     return new Promise((resolve, reject) => {
         let answers = [];
         
+        //Read the terms file
         fs.readFile(lettersPath, 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
@@ -13,14 +14,17 @@ function search(myLetters, myStates){
                 return;
             }
             
+            //Split all lines into a vector
             const linhas = data.split('\n')
         
+            //Pass all words to the verify function and add to answers vector if true
             for (let i = 0; i < linhas.length; i++) {
                 if(verify(myLetters, myStates, linhas[i]) === true) {
                     answers.push(linhas[i].toUpperCase().replace(/\r/g, ''));
                 }
             }
             
+            //return answers
             resolve(answers);
         });
         
