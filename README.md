@@ -19,7 +19,8 @@ This site helps you find possible words for the game based on the information yo
 
 Game link: https://term.ooo/
 
-# ---------- Portuguese version ----------
+---
+# Portuguese version
 
 ## Oque é term.ooo?
 Term.ooo é um jogo semelhante ao Wordle, porém com palavras em português e desafios que envolvem mais de uma palavra.
